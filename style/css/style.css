@@ -112,7 +112,7 @@
     nav {
         display: flex;
         justify-content: space-around;
-        width: 50%;
+        width: 100%;
     }
 
     nav ul{
