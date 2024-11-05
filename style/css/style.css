@@ -1,0 +1,338 @@
+* {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', medium;
+    scroll-behavior: smooth;  
+    cursor: none;  
+}
+
+/* scrollbar modifcation ///////////// */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #95cf3d;
+  border: 0px none #95cf3d;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #95cf3d;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #64c457;
+}
+::-webkit-scrollbar-track {
+  background: #c761b9;
+  border: 0px none #efb0ec;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #c761b9;
+}
+::-webkit-scrollbar-track:active {
+  background: #c761b9;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (min-width:320px) {   
+        /* Grand cercle avec opacité */
+.cursor-large {
+    width: 40px;   /* Taille du grand cercle */
+    height: 40px;
+    border-radius: 50%;
+    border: whitesmoke solid 1px;
+    background-color: rgba(0, 0, 0, 0.2); /* Noir semi-transparent */
+    position: fixed;
+    pointer-events: none; /* Permet de cliquer à travers */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease; /* Légère transition pour un effet lisse */
+    z-index: 10000000;
+}
+
+/* Petit cercle central noir */
+    .cursor-center {
+        width: 10px;  /* Taille du petit cercle */
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ffffff; /* Cercle noir */
+        position: fixed;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 100000000;
+    }
+
+    .cursor-hover {
+        background-color: #eb5757;
+        border: solid 2px black;
+    }
+
+    a {
+        cursor: none; 
+    }
+
+    img {
+        cursor: none;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #1a1a26f7;
+        background-image: url("/pictures/background.png");
+        background-position: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    header {
+        background-color: rgb(26, 26, 38, 97%);
+    }
+
+    header h3 {
+        color: whitesmoke;
+        font-size: 9vw;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;       
+    } 
+    
+    nav ul li{
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4){
+        margin-top: 50px;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: whitesmoke;
+        font-weight: 700;
+        font-size: 5vh;
+        transition: ease-in-out 0.5s;   
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    #aboutme {
+        width: 100%;
+        height: 100vh;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 20px;
+    }
+
+    #aboutme img {
+        width: 30em;
+        position: absolute;
+        right: -55%;
+        bottom: 0px;  
+    }
+
+    #aboutme h1 {
+        color: whitesmoke;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 40px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+    
+    #aboutme h2 {
+        color: whitesmoke;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 25px;  
+    }
+
+    #aboutme hr:nth-child(3) {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        width: 25%;
+        border: none;
+        border-top: dashed 5px greenyellow;
+    }
+    
+    #aboutme hr:nth-child(5) {
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        height: 35%;
+        border: none;
+        border-right: dashed 5px #d610ae;
+    }
+
+
+    footer  {
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke; 
+        background-color: rgb(26, 26, 38, 97%);
+    }
+}
+
+@media all and (min-width:515px) {
+
+    header h3 {
+        font-size: 7vw;
+    }
+
+    nav ul li a{
+        font-size: 5vw;
+  
+    }
+
+    #aboutme img {
+        right: -20%;
+    }
+
+    #aboutme h1 {
+        font-size: 17vw;
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+    }
+    
+    #aboutme h2 {
+        font-size: 6vw;
+    }
+
+    #aboutme hr:nth-child(3) {
+        width: 45%;
+        left: 50px;
+    }
+    
+    #aboutme hr:nth-child(5) {
+        height: 45%;
+    }
+
+}
+
+
+@media all and (min-width:1024px) {
+
+    br {
+        display: none;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: center;
+        height: 5vh;
+    }
+    
+    header h3 {
+        left: 20px;
+        position: absolute;
+        font-size: initial;
+    }
+    
+    /* nav ////////////////// */
+    
+
+
+    nav ul{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4){
+        margin-top: initial;
+    }
+
+    nav ul li a{
+        font-size: initial;
+    }
+    
+    nav ul li a:hover{
+        color: greenyellow;
+        transition: ease-in-out 0.5s;
+    }
+
+    #aboutme {
+        height: 95%;
+    }
+    
+    
+    
+    #aboutme img {
+        width: 35%;
+        right: 0px;
+        transition: ease-in-out 0.2s;
+    }
+    
+    #aboutme img:hover {
+        filter: saturate(2);
+        transition: ease-in-out 0.2s;
+    }  
+
+    #aboutme hr:nth-child(3) {
+        width: 60%;
+    }
+
+    #aboutme hr:nth-child(5) {
+        height: 70%;
+    }
+    
+    footer {
+        height: 5vh;    
+    }
+    
+    footer h4{
+        font-weight: 200;
+    }
+    /* Gestions de la couleur rapidement background color */
+    
+
+    
+    
+}
+
+@media screen and (min-width: 1280px) {
+      
+    
+}
+
+
+
