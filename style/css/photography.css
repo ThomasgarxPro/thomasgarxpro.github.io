@@ -18,8 +18,8 @@
     }
     
     .gallery {
-        width: 75vw;
-        height: 85vh;
+        width: 85vw;
+        height: 75vh;
         overflow: auto;
         padding: 20px;
     }
@@ -141,7 +141,8 @@
     }
 
     .gallery {
-        height: 80vh;
+        height: 75vh;
+        width: 80vw;
     }
 
     .grid-img3 {

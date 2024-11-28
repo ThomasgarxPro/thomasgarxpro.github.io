@@ -8,7 +8,7 @@
     
     #contact {
         width: 80%;
-        height: 90%;
+        height: auto;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -47,9 +47,10 @@
         text-align: center;    
     }
        
-    #box {
-        width: 150px;
-        height: 150px;
+    figure {
+        margin: 25px;
+        width: 125px;
+        height: 125px;
         border-radius: 10px;
         background-image: url("/pictures/icon-contact.jpg");
         background-position: center;
@@ -59,6 +60,10 @@
 
     #box2 {
         filter: brightness(0) invert(1); /* Rend l’icône blanche */
+    }
+
+    #contact ul li {
+        margin: 10px;
     }
       
     ul li:nth-child(1) #box2 {
@@ -123,12 +128,7 @@
         width: 45%;
     }
 
-    #box {
-        width: 200px;
-        height: 200px;
-    }
-
-    #box:hover {
+    figure:hover {
         background-image: url("/pictures/icon-contact2.jpg");
         transition: ease-in-out 0.2s;   
     }

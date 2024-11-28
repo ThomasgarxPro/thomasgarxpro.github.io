@@ -18,8 +18,8 @@
     }
     
     .gallery {
-        width: 75vw;
-        height: 85vh;
+        width: 85vw;
+        height: 75vh;
         overflow: auto;
         padding: 20px;
     }
@@ -73,7 +73,8 @@
     #cyberpunk,
     #iris-book,
     #betw,
-    #witch-2024
+    #witch-2024,
+    #jenny
      {
         grid-row: span 3;
     }
@@ -153,7 +154,8 @@
     }
 
     .gallery {
-        height: 80vh;
+        height: 75vh;
+        width: 80vw;
     }
 
     .grid-img {
