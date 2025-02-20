@@ -194,7 +194,7 @@
         border-top: dashed 5px greenyellow;
     }
     
-    #aboutme hr:nth-child(5) {
+    #aboutme hr:nth-child(9) {
         position: absolute;
         right: 20px;
         top: 50px;
@@ -245,7 +245,7 @@
         left: 50px;
     }
     
-    #aboutme hr:nth-child(5) {
+    #aboutme hr:nth-child(9) {
         height: 45%;
     }
 
@@ -321,12 +321,13 @@
         width: 60%;
     }
 
-    #aboutme hr:nth-child(5) {
+    #aboutme hr:nth-child(9) {
         height: 70%;
     }
     
     footer h4{
         font-weight: 200;
+        
     }
     /* Gestions de la couleur rapidement background color */
     
