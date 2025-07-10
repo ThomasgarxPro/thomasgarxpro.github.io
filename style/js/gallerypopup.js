@@ -9,13 +9,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initialisation pour la galerie illustrateur
-  initializePopup("grid-item", "popup-bg", "popup-img", "./pictures/galleryillust", "active");
-  
-  // Initialisation pour la galerie graphiste
-  initializePopup("grid-item2", "popup-bg2", "popup-img2", "./pictures/gallerygraph", "active2");
+  initializePopup("grid-item", "popup-bg", "popup-img", "./pictures/gallery", "active");
 
-  // Initialisation pour la galerie photographies
-  initializePopup("grid-item3", "popup-bg3", "popup-img3", "./pictures/galleryphoto", "active3");
+  // initializePopup("grid-item", "popup-bg", "popup-img", "./pictures/gallerygraph", "active");
+
+  // initializePopup("grid-item", "popup-bg", "popup-img", "./pictures/galleryphoto", "active");
+  
+  // // Initialisation pour la galerie graphiste
+  // initializePopup("grid-item2", "popup-bg2", "popup-img2", "./pictures/gallerygraph", "active2");
+
+  // // Initialisation pour la galerie photographies
+  // initializePopup("grid-item3", "popup-bg3", "popup-img3", "./pictures/galleryphoto", "active3");
 });
 
 // Fonction générique d'initialisation des pop-ups
@@ -53,3 +57,30 @@ const initializePopup = (gridClass, popupBgId, popupImgId, folderPath, activeCla
   
 };
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popupImg = document.getElementById("popup-img");
+  const altTextBox = document.querySelector(".alt-text");
+
+  if (!popupImg || !altTextBox) {
+    console.error("popup-img ou alt-text non trouvé dans le DOM");
+    return;
+  }
+
+  // Mettre à jour le texte alt quand l'image change
+  const observer = new MutationObserver(() => {
+    altTextBox.textContent = popupImg.alt || ""; // S'assurer que le texte alt est bien affiché
+  });
+
+  // Observer le changement de l'attribut 'src' de l'image
+  observer.observe(popupImg, {
+    attributes: true,
+    attributeFilter: ['src']
+  });
+
+  // Optionnel : si tu veux mettre à jour aussi quand l'attribut 'alt' change
+  observer.observe(popupImg, {
+    attributes: true,
+    attributeFilter: ['alt']
+  });
+});

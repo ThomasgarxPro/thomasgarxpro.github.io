@@ -1,0 +1,268 @@
+@media (min-width:320px) {   
+    main {
+        height: auto;
+    } 
+    
+    #section-illustrateur {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 95vh
+    }
+
+    #section-graphiste {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+
+    #section-photography {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+    }
+    
+    #section-illustrateur h1 {
+        margin: 20px;
+        color: whitesmoke;
+    }
+
+    #section-graphiste h1 {
+        margin: 20px;
+        color: whitesmoke;
+    }
+
+    #section-photography h1 {
+        margin: 20px;
+        color: whitesmoke;
+    }
+
+    .alt-text {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-style: italic;
+    text-align: center;
+    }
+
+    .nav2 {
+        padding: 20px;
+    }
+
+    .nav2 p a{
+        color: white;
+        text-decoration: underline;
+        transition: all ease-in-out 0.5s;
+    }
+    
+    .nav2 p a:hover{
+        color: greenyellow;
+        text-decoration: none;
+        transition: all ease-in-out 0.5s;
+    }
+
+    hr {
+        width: 50%;
+        border: none;
+        border-top: dashed 5px greenyellow;
+    }
+    
+    .gallery {
+        width: 85vw;
+        height: 75vh;
+        overflow: auto;
+        padding: 20px;
+    }
+    
+    
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        grid-auto-rows: 80px;
+        gap: 15px;
+        height: 90vh;
+        grid-auto-flow: dense;
+        width: 100%;
+    }
+    
+    
+    #grid::-webkit-scrollbar {
+        background-color: #00e59b;
+        width: 10px;
+    }
+    
+    #grid::-webkit-scrollbar-thumb {
+        background-color: red;
+    }
+    
+    .grid-item {
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 10px;
+    }
+    
+    .grid-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        
+    }
+    
+    #blade-runner,
+    #lydia_web,
+    #yumi-portrait,
+    #battle_web,
+    #yumi-portrait,
+    #felix_web,
+    #lydia-coffee,
+    #maeve-workout-web,
+    #froggy-hoodies,
+    #maeve,
+    #cyberpunk,
+    #iris-book,
+    #betw,
+    #witch-2024,
+    #jenny,
+    #Cyberpunk-girl
+     {
+        grid-row: span 3;
+    }
+    
+    #chara_lydia,
+    #lydia_river,
+    #iris-flying-on-a-broom-web
+        {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    
+    #forest-woman,
+    #visuel1,
+    #sample-portfolio2,
+    #rally,
+    #purple-confection
+    {
+        grid-row: span 2;
+    }
+    
+    #flowers,
+    #betw-alex,
+    #sky,
+    #meduse,
+    #thomas,
+    #fish
+    {
+        grid-row: span 2;
+    }
+    
+    #popup-bg {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, .8);
+        z-index: 1000000;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #popup-bg.active {
+        display: flex;
+        position: fixed;    
+    }
+    
+    #popup-content {
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    #popup-img {
+        object-fit: contain;
+        width: 90%;
+        height: 85vh;
+    }
+    
+    #popup-close {
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+    
+    #popup-close:hover {
+        background-color: #FF6F61;
+    }
+
+}
+
+@media all and (min-width:515px) {
+
+}
+
+
+@media all and (min-width:1024px) {
+
+    .gallery {
+        height: 75vh;
+        width: 80vw;
+    }
+
+    .grid-img {
+        transition: transform 0.2s ease;
+
+    }
+
+    .grid-img:hover {
+        transform: scale(1.2);
+
+    }
+
+    .grid-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        z-index: 2;
+    }
+
+    #chara_lydia,
+    #lydia_river,
+    #iris-flying-on-a-broom-web
+        {
+        grid-column: span 2;
+    }
+    #popup-img {
+        height: 80vh;
+    }
+ 
+}
+
+@media screen and (min-width: 1280px) {
+    
+    
+}
